@@ -7,16 +7,18 @@ int main(void) {
     printf("Inserisci il prezzo di prodotti: ");
     scanf("%f", &prezzo);
     totale = num * prezzo;
-    printf("il totale del prezzo è: %f ",totale);
+    printf("il totale del prezzo e': %f ",totale);
     if (totale >= 50) {
-        totale=totale*0.20;
-        printf("il prezzo e' : %f perche' uno sconto del 20%% e' stato applicato",totale);
+        totale = totale*0.20;
+        printf("il prezzo e': %f perche' lo sconto del 20%% e' stato applicato",totale);
     }
-    if(totale >= 10) {
-        totale=totale*0.10;
-        printf("il prezzo e' : %f perche' uno sconto del 10%% e' stato applicato",totale);
+    else if (totale >= 10) {
+        totale = totale*0.10;
+        printf("il prezzo e' : %f perche' lo sconto del 10%% e' stato applicato",totale);
+    } else {
+        printf("lo sconto non verra' applicato perche' il prezzo non supera ne i 50 euro ne i 10 euro.",totale);
     }
-        else {
-            printf("il prezzo non eccede i 10 euro percio' nessun sconto è applicato.");
-        }
-        }
+}
+
+
+
